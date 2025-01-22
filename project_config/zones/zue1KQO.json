@@ -1,0 +1,21 @@
+{
+  "name": "evaluate_test_python",
+  "color": "#C82423",
+  "items": [
+    {
+      "objectId": "compute_test_predicted_eval",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test_predicted_eval",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "position": {},
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

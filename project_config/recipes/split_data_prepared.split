@@ -1,0 +1,310 @@
+{
+  "centileShuffle": false,
+  "centileSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "defaultOutputIndex": 1,
+  "seed": 1337,
+  "randomColumns": [],
+  "centileOrders": [],
+  "rangeSetTime": false,
+  "randomSplits": [
+    {
+      "outputIndex": 0,
+      "share": 70
+    }
+  ],
+  "randomColumnsSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "computedColumns": [],
+  "writeComputedColumnsInOutput": false,
+  "mode": "RANDOM",
+  "centileTDigest": false,
+  "valueSplits": [
+    {
+      "outputIndex": 0,
+      "caseSensitive": false,
+      "value": ""
+    }
+  ],
+  "rangeSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "filterSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "fraud_bool",
+                "type": "bigint"
+              },
+              {
+                "name": "income",
+                "type": "double"
+              },
+              {
+                "name": "name_email_similarity",
+                "type": "double"
+              },
+              {
+                "name": "prev_address_months_count",
+                "type": "bigint"
+              },
+              {
+                "name": "current_address_months_count",
+                "type": "bigint"
+              },
+              {
+                "name": "customer_age",
+                "type": "bigint"
+              },
+              {
+                "name": "days_since_request",
+                "type": "double"
+              },
+              {
+                "name": "intended_balcon_amount",
+                "type": "double"
+              },
+              {
+                "name": "payment_type_AD",
+                "type": "bigint"
+              },
+              {
+                "name": "payment_type_AA",
+                "type": "bigint"
+              },
+              {
+                "name": "payment_type_AC",
+                "type": "bigint"
+              },
+              {
+                "name": "payment_type_AB",
+                "type": "bigint"
+              },
+              {
+                "name": "zip_count_4w",
+                "type": "bigint"
+              },
+              {
+                "name": "velocity_6h",
+                "type": "double"
+              },
+              {
+                "name": "velocity_24h",
+                "type": "double"
+              },
+              {
+                "name": "velocity_4w",
+                "type": "double"
+              },
+              {
+                "name": "bank_branch_count_8w",
+                "type": "bigint"
+              },
+              {
+                "name": "date_of_birth_distinct_emails_4w",
+                "type": "bigint"
+              },
+              {
+                "name": "employment_status_CA",
+                "type": "bigint"
+              },
+              {
+                "name": "employment_status_CB",
+                "type": "bigint"
+              },
+              {
+                "name": "employment_status_CE",
+                "type": "bigint"
+              },
+              {
+                "name": "employment_status_CF",
+                "type": "bigint"
+              },
+              {
+                "name": "employment_status_CD",
+                "type": "bigint"
+              },
+              {
+                "name": "employment_status_CC",
+                "type": "bigint"
+              },
+              {
+                "name": "employment_status_CG",
+                "type": "bigint"
+              },
+              {
+                "name": "credit_risk_score",
+                "type": "bigint"
+              },
+              {
+                "name": "email_is_free",
+                "type": "bigint"
+              },
+              {
+                "name": "housing_status_BE",
+                "type": "bigint"
+              },
+              {
+                "name": "housing_status_BA",
+                "type": "bigint"
+              },
+              {
+                "name": "housing_status_BD",
+                "type": "bigint"
+              },
+              {
+                "name": "housing_status_BC",
+                "type": "bigint"
+              },
+              {
+                "name": "housing_status_BB",
+                "type": "bigint"
+              },
+              {
+                "name": "housing_status_BF",
+                "type": "bigint"
+              },
+              {
+                "name": "housing_status_BG",
+                "type": "bigint"
+              },
+              {
+                "name": "phone_home_valid",
+                "type": "bigint"
+              },
+              {
+                "name": "phone_mobile_valid",
+                "type": "bigint"
+              },
+              {
+                "name": "bank_months_count",
+                "type": "bigint"
+              },
+              {
+                "name": "has_other_cards",
+                "type": "bigint"
+              },
+              {
+                "name": "proposed_credit_limit",
+                "type": "bigint"
+              },
+              {
+                "name": "foreign_request",
+                "type": "bigint"
+              },
+              {
+                "name": "source_INTERNET",
+                "type": "bigint"
+              },
+              {
+                "name": "session_length_in_minutes",
+                "type": "double"
+              },
+              {
+                "name": "device_os_other",
+                "type": "bigint"
+              },
+              {
+                "name": "device_os_linux",
+                "type": "bigint"
+              },
+              {
+                "name": "device_os_windows",
+                "type": "bigint"
+              },
+              {
+                "name": "device_os_macintosh",
+                "type": "bigint"
+              },
+              {
+                "name": "device_os_x11",
+                "type": "bigint"
+              },
+              {
+                "name": "keep_alive_session",
+                "type": "bigint"
+              },
+              {
+                "name": "device_distinct_emails_8w",
+                "type": "bigint"
+              },
+              {
+                "name": "month",
+                "type": "bigint"
+              }
+            ]
+          }
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ]
+}

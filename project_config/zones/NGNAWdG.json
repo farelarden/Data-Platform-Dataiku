@@ -1,0 +1,26 @@
+{
+  "name": "data manipulate",
+  "color": "#31439C",
+  "items": [
+    {
+      "objectId": "compute_data_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "data_prepared",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [
+    {
+      "objectId": "data",
+      "objectType": "DATASET"
+    }
+  ],
+  "position": {},
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "evaluate test",
+  "color": "#087ABF",
+  "items": [
+    {
+      "objectId": "lbUXa69u",
+      "objectType": "MODEL_EVALUATION_STORE"
+    },
+    {
+      "objectId": "evaluate_on_test_predicted_merged",
+      "objectType": "RECIPE"
+    }
+  ],
+  "shared": [
+    {
+      "objectId": "test_predicted_merged",
+      "objectType": "DATASET"
+    }
+  ],
+  "position": {},
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

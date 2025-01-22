@@ -1,0 +1,138 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "maxRecordsForDisplay": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "maxStoredBytes": 104857600,
+      "ascending": true,
+      "timeout": -1,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL"
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "columnUseScientificNotationByName": {},
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "fraud_bool"
+        ],
+        "keep": false,
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "FULL",
+      "ascending": true
+    },
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "zip_count_4w": 105,
+    "has_other_cards": 128,
+    "foreign_request": 128,
+    "device_os_windows": 143,
+    "bank_months_count": 143,
+    "velocity_24h": 134,
+    "prev_address_months_count": 203,
+    "credit_risk_score": 143,
+    "payment_type_AD": 128,
+    "payment_type_AC": 128,
+    "payment_type_AB": 128,
+    "payment_type_AA": 128,
+    "email_is_free": 113,
+    "keep_alive_session": 150,
+    "velocity_6h": 134,
+    "fraud_bool": 100,
+    "customer_age": 105,
+    "device_os_x11": 113,
+    "device_os_linux": 128,
+    "month": 100,
+    "income": 134,
+    "intended_balcon_amount": 204,
+    "phone_mobile_valid": 150,
+    "date_of_birth_distinct_emails_4w": 255,
+    "source_INTERNET": 128,
+    "session_length_in_minutes": 225,
+    "housing_status_BG": 143,
+    "days_since_request": 176,
+    "housing_status_BD": 143,
+    "housing_status_BC": 143,
+    "housing_status_BF": 143,
+    "velocity_4w": 134,
+    "housing_status_BE": 143,
+    "housing_status_BB": 143,
+    "housing_status_BA": 143,
+    "device_os_macintosh": 158,
+    "bank_branch_count_8w": 165,
+    "current_address_months_count": 225,
+    "phone_home_valid": 135,
+    "name_email_similarity": 197,
+    "employment_status_CA": 165,
+    "proposed_credit_limit": 173,
+    "employment_status_CB": 165,
+    "employment_status_CC": 165,
+    "employment_status_CD": 165,
+    "employment_status_CE": 165,
+    "employment_status_CF": 165,
+    "employment_status_CG": 165,
+    "device_os_other": 128,
+    "device_distinct_emails_8w": 203
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH",
+    "individualColumnsRules": []
+  }
+}

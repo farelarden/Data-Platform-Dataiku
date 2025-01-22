@@ -1,0 +1,3967 @@
+{
+  "dataSpec": {
+    "inputDatasetSmartName": "data",
+    "datasetSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": true,
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": [
+            {
+              "input": "col_0",
+              "operator": "contains",
+              "col": "fraud_bool",
+              "num": 0.0,
+              "num2": 0.0
+            }
+          ]
+        }
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "RANDOM_FIXED_RATIO",
+      "maxRecords": 100000,
+      "targetRatio": 0.02,
+      "ascending": false,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1,
+      "seed": 1337
+    },
+    "autoRefreshSample": true,
+    "refreshTrigger": 2,
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "rootCard": {
+    "type": "worksheet_root",
+    "confidenceLevel": 0.95,
+    "showConfidenceInterval": false,
+    "cards": [
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": false,
+        "xColumns": [
+          {
+            "name": "bank_branch_count_8w",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "bank_months_count",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "credit_risk_score",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "current_address_months_count",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "customer_age",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "date_of_birth_distinct_emails_4w",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "days_since_request",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "device_distinct_emails_8w",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "device_fraud_count",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "device_os",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "email_is_free",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "employment_status",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "foreign_request",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "fraud_bool",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "has_other_cards",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "housing_status",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "income",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "intended_balcon_amount",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "keep_alive_session",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "month",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "name_email_similarity",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "payment_type",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "phone_home_valid",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "phone_mobile_valid",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "prev_address_months_count",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "proposed_credit_limit",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "session_length_in_minutes",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "source",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "velocity_24h",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "velocity_4w",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "velocity_6h",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "zip_count_4w",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "bank_branch_count_8w",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "bank_branch_count_8w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "CeC7pYZ"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "bank_branch_count_8w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "EmOiP2z"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "bank_branch_count_8w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "xJSjxEF"
+              }
+            ],
+            "id": "pikHkgn"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "bank_months_count",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "bank_months_count",
+                  "type": "CATEGORICAL"
+                },
+                "id": "UqZV51G"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "bank_months_count",
+                  "type": "CATEGORICAL"
+                },
+                "id": "7YnSW9s"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "bank_months_count",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ZVh0EsL"
+              }
+            ],
+            "id": "Wn4czie"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "credit_risk_score",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "credit_risk_score",
+                  "type": "CONTINUOUS"
+                },
+                "id": "4XC7jKS"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "credit_risk_score",
+                  "type": "CONTINUOUS"
+                },
+                "id": "njpThIA"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "credit_risk_score",
+                  "type": "CONTINUOUS"
+                },
+                "id": "YSmNGad"
+              }
+            ],
+            "id": "JkK1Yw6"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "current_address_months_count",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "current_address_months_count",
+                  "type": "CONTINUOUS"
+                },
+                "id": "fNGzmau"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "current_address_months_count",
+                  "type": "CONTINUOUS"
+                },
+                "id": "uwwozgb"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "current_address_months_count",
+                  "type": "CONTINUOUS"
+                },
+                "id": "p3Zyr8u"
+              }
+            ],
+            "id": "PulySmN"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "customer_age",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "customer_age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "V3Ox5SH"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "customer_age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Isktr8f"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "customer_age",
+                  "type": "CATEGORICAL"
+                },
+                "id": "3SSHhBq"
+              }
+            ],
+            "id": "dZnZpdV"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "date_of_birth_distinct_emails_4w",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "date_of_birth_distinct_emails_4w",
+                  "type": "CATEGORICAL"
+                },
+                "id": "98VN1kK"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "date_of_birth_distinct_emails_4w",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ttCUdEd"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "date_of_birth_distinct_emails_4w",
+                  "type": "CATEGORICAL"
+                },
+                "id": "jxbjyFI"
+              }
+            ],
+            "id": "DABUDoN"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "days_since_request",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "days_since_request",
+                  "type": "CONTINUOUS"
+                },
+                "id": "sla5RAk"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "days_since_request",
+                  "type": "CONTINUOUS"
+                },
+                "id": "XMv8j6k"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "days_since_request",
+                  "type": "CONTINUOUS"
+                },
+                "id": "J6wfNBO"
+              }
+            ],
+            "id": "mr5GvWb"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "device_distinct_emails_8w",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "device_distinct_emails_8w",
+                  "type": "CATEGORICAL"
+                },
+                "id": "sPnNypo"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "device_distinct_emails_8w",
+                  "type": "CATEGORICAL"
+                },
+                "id": "IuDow22"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "device_distinct_emails_8w",
+                  "type": "CATEGORICAL"
+                },
+                "id": "JJkoKCd"
+              }
+            ],
+            "id": "GsDvVJj"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "device_fraud_count",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "device_fraud_count",
+                  "type": "CATEGORICAL"
+                },
+                "id": "oGxeh4q"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "device_fraud_count",
+                  "type": "CATEGORICAL"
+                },
+                "id": "BcFG3g3"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "device_fraud_count",
+                  "type": "CATEGORICAL"
+                },
+                "id": "6H8shHL"
+              }
+            ],
+            "id": "HcZiFYM"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "device_os",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "id": "SzngL3L"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "id": "GvW9yPk"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "id": "mwOBlnC"
+              }
+            ],
+            "id": "d4PUtYt"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "email_is_free",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CATEGORICAL"
+                },
+                "id": "JzawJTk"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CATEGORICAL"
+                },
+                "id": "KdsJkWe"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CATEGORICAL"
+                },
+                "id": "jXLRr2O"
+              }
+            ],
+            "id": "K4kX9e3"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "employment_status",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "employment_status",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Id4gHzP"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "employment_status",
+                  "type": "CATEGORICAL"
+                },
+                "id": "k7PwDOQ"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "employment_status",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ydeCv9K"
+              }
+            ],
+            "id": "oYE2LW8"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "foreign_request",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CATEGORICAL"
+                },
+                "id": "zG0x0EI"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CATEGORICAL"
+                },
+                "id": "TUtRFC1"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CATEGORICAL"
+                },
+                "id": "9Yqp74a"
+              }
+            ],
+            "id": "kZrXHJM"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "fraud_bool",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "LW5nMS0"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "CQGU6fY"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "U7CYx9R"
+              }
+            ],
+            "id": "rz79jm0"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "has_other_cards",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CATEGORICAL"
+                },
+                "id": "4v2ru8T"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CATEGORICAL"
+                },
+                "id": "j8c4JbG"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CATEGORICAL"
+                },
+                "id": "XSRZ2yX"
+              }
+            ],
+            "id": "ZkPfmNc"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "housing_status",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "housing_status",
+                  "type": "CATEGORICAL"
+                },
+                "id": "yZzybQj"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "housing_status",
+                  "type": "CATEGORICAL"
+                },
+                "id": "OLF110x"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "housing_status",
+                  "type": "CATEGORICAL"
+                },
+                "id": "3nhAaYg"
+              }
+            ],
+            "id": "9dbYiDl"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "income",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "income",
+                  "type": "CATEGORICAL"
+                },
+                "id": "CF5gv8h"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "income",
+                  "type": "CATEGORICAL"
+                },
+                "id": "uxNxTJq"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "income",
+                  "type": "CATEGORICAL"
+                },
+                "id": "CE6FXr9"
+              }
+            ],
+            "id": "xmC34Vn"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "intended_balcon_amount",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "intended_balcon_amount",
+                  "type": "CONTINUOUS"
+                },
+                "id": "hx7pjsd"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "intended_balcon_amount",
+                  "type": "CONTINUOUS"
+                },
+                "id": "HldENt8"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "intended_balcon_amount",
+                  "type": "CONTINUOUS"
+                },
+                "id": "yBbx1VW"
+              }
+            ],
+            "id": "lZ56Pmx"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "keep_alive_session",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "keep_alive_session",
+                  "type": "CATEGORICAL"
+                },
+                "id": "fcuAoiA"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "keep_alive_session",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ll0oNWG"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "keep_alive_session",
+                  "type": "CATEGORICAL"
+                },
+                "id": "2ki0Za1"
+              }
+            ],
+            "id": "fUCS2KB"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "month",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "month",
+                  "type": "CATEGORICAL"
+                },
+                "id": "ANsjw5K"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "month",
+                  "type": "CATEGORICAL"
+                },
+                "id": "oOmvO3x"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "month",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Bhx8GSK"
+              }
+            ],
+            "id": "BSSCGD8"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "name_email_similarity",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "name_email_similarity",
+                  "type": "CONTINUOUS"
+                },
+                "id": "MiZ3exn"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "name_email_similarity",
+                  "type": "CONTINUOUS"
+                },
+                "id": "pQTirOt"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "name_email_similarity",
+                  "type": "CONTINUOUS"
+                },
+                "id": "b2OaIOc"
+              }
+            ],
+            "id": "PHg4CW9"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "payment_type",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "payment_type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "gA39XNk"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "payment_type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "kd7ZCP1"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "payment_type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "vLENNiQ"
+              }
+            ],
+            "id": "ZPSn0mz"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "phone_home_valid",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "0AX6WSV"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Sa049fD"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "BA4Uy5D"
+              }
+            ],
+            "id": "qTboPQE"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "phone_mobile_valid",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "1mtCi3c"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "7PpNwof"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "MwEQHga"
+              }
+            ],
+            "id": "oxWgG5X"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "prev_address_months_count",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "prev_address_months_count",
+                  "type": "CONTINUOUS"
+                },
+                "id": "3hEoYbw"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "prev_address_months_count",
+                  "type": "CONTINUOUS"
+                },
+                "id": "vXBFhoF"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "prev_address_months_count",
+                  "type": "CONTINUOUS"
+                },
+                "id": "lghP5rN"
+              }
+            ],
+            "id": "4iqQTku"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "proposed_credit_limit",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "proposed_credit_limit",
+                  "type": "CATEGORICAL"
+                },
+                "id": "yCLOsDp"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "proposed_credit_limit",
+                  "type": "CATEGORICAL"
+                },
+                "id": "6w3q01c"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "proposed_credit_limit",
+                  "type": "CATEGORICAL"
+                },
+                "id": "mPqXyKU"
+              }
+            ],
+            "id": "EOMsmnI"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "session_length_in_minutes",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "session_length_in_minutes",
+                  "type": "CONTINUOUS"
+                },
+                "id": "CEcGtfc"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "session_length_in_minutes",
+                  "type": "CONTINUOUS"
+                },
+                "id": "fuRVnv8"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "session_length_in_minutes",
+                  "type": "CONTINUOUS"
+                },
+                "id": "1cOuf0F"
+              }
+            ],
+            "id": "xpxhkkc"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "source",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "zQ9jiZf"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "s4Gfror"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "kHSxqjk"
+              }
+            ],
+            "id": "0E2p7pL"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "velocity_24h",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "velocity_24h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "P82hlkB"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "velocity_24h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "skoc1Bp"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "velocity_24h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "xG2RrOu"
+              }
+            ],
+            "id": "HCbtLpV"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "velocity_4w",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "velocity_4w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Fyc8MOk"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "velocity_4w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "pcX7YNA"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "velocity_4w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "WoQrj4j"
+              }
+            ],
+            "id": "9uHa2kJ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "velocity_6h",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "velocity_6h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "QW7oOCw"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "velocity_6h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "yJGfL9v"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "velocity_6h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "e1LHTI4"
+              }
+            ],
+            "id": "mYFJWqo"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "zip_count_4w",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "zip_count_4w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "DzLkd2k"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "zip_count_4w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "ey9mb7i"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "zip_count_4w",
+                  "type": "CONTINUOUS"
+                },
+                "id": "9zeSaPY"
+              }
+            ],
+            "id": "eB2xioC"
+          }
+        ],
+        "id": "iJIW1Aj"
+      },
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": true,
+        "xColumns": [
+          {
+            "name": "credit_risk_score",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "email_is_free",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "foreign_request",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "fraud_bool",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "has_other_cards",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "phone_home_valid",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "phone_mobile_valid",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "velocity_24h",
+            "type": "CONTINUOUS"
+          },
+          {
+            "name": "velocity_6h",
+            "type": "CONTINUOUS"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "credit_risk_score",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "credit_risk_score",
+                  "type": "CONTINUOUS"
+                },
+                "id": "JU2RrVA"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "credit_risk_score",
+                  "type": "CONTINUOUS"
+                },
+                "id": "D13rIIb"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "credit_risk_score",
+                  "type": "CONTINUOUS"
+                },
+                "id": "AohRJkr"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "credit_risk_score",
+                  "type": "CONTINUOUS"
+                },
+                "id": "CDa0Z03"
+              }
+            ],
+            "id": "ceNmcdp"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "email_is_free",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CONTINUOUS"
+                },
+                "id": "FPD31pn"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CONTINUOUS"
+                },
+                "id": "LfUCym5"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CONTINUOUS"
+                },
+                "id": "PSuNiWH"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CONTINUOUS"
+                },
+                "id": "sjWlhnj"
+              }
+            ],
+            "id": "ZxACUDk"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "foreign_request",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CONTINUOUS"
+                },
+                "id": "pWhrMlZ"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CONTINUOUS"
+                },
+                "id": "sY5Ynsf"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CONTINUOUS"
+                },
+                "id": "jhzCVcc"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CONTINUOUS"
+                },
+                "id": "ebcLgeu"
+              }
+            ],
+            "id": "WBR19kl"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "fraud_bool",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CONTINUOUS"
+                },
+                "id": "4dzNOQT"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CONTINUOUS"
+                },
+                "id": "izmoVgr"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CONTINUOUS"
+                },
+                "id": "blwhlGF"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CONTINUOUS"
+                },
+                "id": "cpw7Vmv"
+              }
+            ],
+            "id": "Vg3we3F"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "has_other_cards",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CONTINUOUS"
+                },
+                "id": "SlFBZJe"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CONTINUOUS"
+                },
+                "id": "uvAYnom"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CONTINUOUS"
+                },
+                "id": "YxKP4VV"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CONTINUOUS"
+                },
+                "id": "xd5oxj8"
+              }
+            ],
+            "id": "tYZXfWJ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "phone_home_valid",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "I4VmStt"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "cnQHpZO"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "i8ZfTO7"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "0hQCuvg"
+              }
+            ],
+            "id": "lWSJ7Es"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "phone_mobile_valid",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "d8brZTJ"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "TP42Fx7"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "mmmPhZW"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CONTINUOUS"
+                },
+                "id": "pC7Cvt3"
+              }
+            ],
+            "id": "7SvWeCL"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "velocity_24h",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "velocity_24h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "OEp2cMi"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "velocity_24h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "bF4B3Xe"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "velocity_24h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "XEj6h52"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "velocity_24h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "gE90iBm"
+              }
+            ],
+            "id": "7FO5GS0"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "velocity_6h",
+              "type": "CONTINUOUS"
+            },
+            "cards": [
+              {
+                "type": "numerical_histogram",
+                "showBoxPlot": true,
+                "showHistogram": true,
+                "binningMode": "AUTO",
+                "nbBins": 25,
+                "customBinningBoundaries": [],
+                "column": {
+                  "name": "velocity_6h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "0WKjDxI"
+              },
+              {
+                "type": "cdf_plot",
+                "column": {
+                  "name": "velocity_6h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "Dqhf3Yu"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "velocity_6h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "mAzkzXb"
+              },
+              {
+                "type": "quantile_table",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "column": {
+                  "name": "velocity_6h",
+                  "type": "CONTINUOUS"
+                },
+                "id": "9BsPDlL"
+              }
+            ],
+            "id": "Am8Yrif"
+          }
+        ],
+        "id": "FL0WVOa"
+      },
+      {
+        "type": "univariate_header",
+        "showHistogram": true,
+        "showQuantile": true,
+        "showFrequencyTable": true,
+        "showSummary": true,
+        "showBoxPlot": true,
+        "showCumulativeDistributionFunction": false,
+        "xColumns": [
+          {
+            "name": "device_os",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "email_is_free",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "foreign_request",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "fraud_bool",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "has_other_cards",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "keep_alive_session",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "payment_type",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "phone_home_valid",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "phone_mobile_valid",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "source",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "device_os",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "id": "6r6GlyQ"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "id": "IDtLacx"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "id": "W7kcW9R"
+              }
+            ],
+            "id": "reBaT6p"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "email_is_free",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CATEGORICAL"
+                },
+                "id": "NzU0Buv"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CATEGORICAL"
+                },
+                "id": "RLXcz6T"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "email_is_free",
+                  "type": "CATEGORICAL"
+                },
+                "id": "scgqeW0"
+              }
+            ],
+            "id": "KfBwWhJ"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "foreign_request",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CATEGORICAL"
+                },
+                "id": "jLt3WGP"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CATEGORICAL"
+                },
+                "id": "kQ7n9XS"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "foreign_request",
+                  "type": "CATEGORICAL"
+                },
+                "id": "psL6rMS"
+              }
+            ],
+            "id": "s7T0NKP"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "fraud_bool",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "zyXpRew"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "vIiWmM3"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "AC7REdx"
+              }
+            ],
+            "id": "g8Lrh5u"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "has_other_cards",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CATEGORICAL"
+                },
+                "id": "Co3OyCi"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CATEGORICAL"
+                },
+                "id": "XF5161B"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "has_other_cards",
+                  "type": "CATEGORICAL"
+                },
+                "id": "J87qJPS"
+              }
+            ],
+            "id": "ZP9Rwkz"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "keep_alive_session",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "keep_alive_session",
+                  "type": "CATEGORICAL"
+                },
+                "id": "XdQ8oHK"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "keep_alive_session",
+                  "type": "CATEGORICAL"
+                },
+                "id": "p86RIfU"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "keep_alive_session",
+                  "type": "CATEGORICAL"
+                },
+                "id": "lC3FBYk"
+              }
+            ],
+            "id": "LRsfVtf"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "payment_type",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "payment_type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "PvDrf3V"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "payment_type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "VXfXvq2"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "payment_type",
+                  "type": "CATEGORICAL"
+                },
+                "id": "0f9yQKm"
+              }
+            ],
+            "id": "dKReDvT"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "phone_home_valid",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "JLgxNPJ"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "kprBIfc"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "phone_home_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "TG2ca2q"
+              }
+            ],
+            "id": "ZAaOZYT"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "phone_mobile_valid",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "vpK9Oea"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "A9QhmL7"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "phone_mobile_valid",
+                  "type": "CATEGORICAL"
+                },
+                "id": "WERhKdM"
+              }
+            ],
+            "id": "EO99wYt"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "source",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "categorical_histogram",
+                "maxValues": 10,
+                "groupOthers": false,
+                "column": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "6vNMlgW"
+              },
+              {
+                "type": "univariate_summary",
+                "confidenceLevel": 0.95,
+                "showConfidenceInterval": false,
+                "compute": {
+                  "totalCount": true,
+                  "mean": true,
+                  "sum": false,
+                  "median": true,
+                  "std": true,
+                  "variance": false,
+                  "skewness": false,
+                  "kurtosis": false,
+                  "sem": false,
+                  "completeCount": true,
+                  "nbEmpty": true,
+                  "zeroCount": false,
+                  "zeroRatio": false,
+                  "nonZeroRatio": false,
+                  "iqr": false,
+                  "distinctCount": true,
+                  "nbNonEmpty": false,
+                  "min": true,
+                  "max": true,
+                  "range": false,
+                  "mode": true
+                },
+                "column": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "rftbKHm"
+              },
+              {
+                "type": "univariate_frequency_table",
+                "maxValues": 10,
+                "column": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "rjPdBrT"
+              }
+            ],
+            "id": "hLR3Ne7"
+          }
+        ],
+        "id": "zJPry6w"
+      },
+      {
+        "type": "bivariate_header",
+        "yColumn": {
+          "name": "source",
+          "type": "CATEGORICAL"
+        },
+        "showMosaicPlot": false,
+        "showHistogram": true,
+        "showScatterPlot": false,
+        "showFrequencyTable": true,
+        "showBoxPlot": false,
+        "showSummary": false,
+        "xColumns": [
+          {
+            "name": "fraud_bool",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "device_os",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "fraud_bool",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "oJ3njH6"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "7kubZRv"
+              }
+            ],
+            "id": "N19d4Ie"
+          },
+          {
+            "type": "column_card",
+            "column": {
+              "name": "device_os",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "nTZVcHa"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "device_os",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "source",
+                  "type": "CATEGORICAL"
+                },
+                "id": "SuVxivY"
+              }
+            ],
+            "id": "jdfZG44"
+          }
+        ],
+        "id": "DKTu5V7"
+      },
+      {
+        "type": "correlation_matrix",
+        "heatmapParams": {
+          "showValues": false,
+          "showColors": true,
+          "showAbsValues": false,
+          "threshold": 0.0,
+          "filterVariablesWithoutValues": false
+        },
+        "metric": "SPEARMAN",
+        "columns": [
+          {
+            "name": "fraud_bool",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "income",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "name_email_similarity",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "prev_address_months_count",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "current_address_months_count",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "customer_age",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "days_since_request",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "intended_balcon_amount",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "zip_count_4w",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "velocity_6h",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "velocity_24h",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "velocity_4w",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "bank_branch_count_8w",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "date_of_birth_distinct_emails_4w",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "credit_risk_score",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "email_is_free",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "phone_home_valid",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "phone_mobile_valid",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "bank_months_count",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "has_other_cards",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "proposed_credit_limit",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "foreign_request",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "session_length_in_minutes",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "keep_alive_session",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "device_distinct_emails_8w",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "device_fraud_count",
+            "type": "CATEGORICAL"
+          },
+          {
+            "name": "month",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "id": "OZZUIgt"
+      },
+      {
+        "type": "bivariate_header",
+        "yColumn": {
+          "name": "fraud_bool",
+          "type": "CATEGORICAL"
+        },
+        "showMosaicPlot": true,
+        "showHistogram": true,
+        "showScatterPlot": false,
+        "showFrequencyTable": true,
+        "showBoxPlot": false,
+        "showSummary": false,
+        "xColumns": [
+          {
+            "name": "prev_address_months_count",
+            "type": "CATEGORICAL"
+          }
+        ],
+        "cards": [
+          {
+            "type": "column_card",
+            "column": {
+              "name": "prev_address_months_count",
+              "type": "CATEGORICAL"
+            },
+            "cards": [
+              {
+                "type": "bivariate_histogram",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "prev_address_months_count",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "uBCJSMh"
+              },
+              {
+                "type": "mosaic_plot",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "prev_address_months_count",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "eCy9UUs"
+              },
+              {
+                "type": "bivariate_frequency_table",
+                "xBinningMode": "AUTO",
+                "yBinningMode": "AUTO",
+                "maxValuesX": 5,
+                "maxValuesY": 5,
+                "groupWithOthersX": true,
+                "groupWithOthersY": true,
+                "xCustomBinningBoundaries": [],
+                "yCustomBinningBoundaries": [],
+                "xColumn": {
+                  "name": "prev_address_months_count",
+                  "type": "CATEGORICAL"
+                },
+                "yColumn": {
+                  "name": "fraud_bool",
+                  "type": "CATEGORICAL"
+                },
+                "id": "qCB4Dwu"
+              }
+            ],
+            "id": "A9hr3dA"
+          }
+        ],
+        "id": "lCmRGkl"
+      }
+    ],
+    "id": "j5etU6i"
+  },
+  "name": "Worksheet",
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1736493885694
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

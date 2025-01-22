@@ -1,0 +1,229 @@
+{
+  "rebuildBehavior": "EXPLICIT",
+  "name": "eval_test",
+  "metrics": {
+    "probes": [],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "partition": "NP",
+      "columns": [],
+      "metrics": [
+        "reporting:BUILD_DURATION"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "partition": "NP",
+      "checks": []
+    }
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "displayParams": {
+    "displayedMetrics": [
+      "ACCURACY",
+      "PRECISION",
+      "RECALL",
+      "F1"
+    ],
+    "allAvailableMetrics": [
+      "ACCURACY",
+      "PRECISION",
+      "RECALL",
+      "F1",
+      "COST_MATRIX",
+      "ROC_AUC",
+      "CUMULATIVE_LIFT",
+      "AVERAGE_PRECISION",
+      "LOG_LOSS",
+      "CALIBRATION_LOSS",
+      "DATA_DRIFT",
+      "DATA_DRIFT_PVALUE",
+      "MIN_KS",
+      "MIN_CHISQUARE",
+      "MAX_PSI",
+      "PREDICTION_DRIFT_PSI",
+      "PREDICTION_DRIFT_CHISQUARE",
+      "zip_count_4w_KS",
+      "has_other_cards_KS",
+      "foreign_request_KS",
+      "device_os_windows_KS",
+      "bank_months_count_KS",
+      "velocity_24h_KS",
+      "prev_address_months_count_KS",
+      "credit_risk_score_KS",
+      "payment_type_AD_KS",
+      "payment_type_AC_KS",
+      "payment_type_AB_KS",
+      "payment_type_AA_KS",
+      "email_is_free_KS",
+      "keep_alive_session_KS",
+      "velocity_6h_KS",
+      "customer_age_KS",
+      "device_os_x11_KS",
+      "device_os_linux_KS",
+      "month_KS",
+      "income_KS",
+      "intended_balcon_amount_KS",
+      "phone_mobile_valid_KS",
+      "date_of_birth_distinct_emails_4w_KS",
+      "source_INTERNET_KS",
+      "session_length_in_minutes_KS",
+      "housing_status_BG_KS",
+      "days_since_request_KS",
+      "housing_status_BD_KS",
+      "housing_status_BC_KS",
+      "housing_status_BF_KS",
+      "velocity_4w_KS",
+      "housing_status_BE_KS",
+      "housing_status_BB_KS",
+      "housing_status_BA_KS",
+      "device_os_macintosh_KS",
+      "bank_branch_count_8w_KS",
+      "current_address_months_count_KS",
+      "phone_home_valid_KS",
+      "name_email_similarity_KS",
+      "employment_status_CA_KS",
+      "proposed_credit_limit_KS",
+      "employment_status_CB_KS",
+      "employment_status_CC_KS",
+      "employment_status_CD_KS",
+      "employment_status_CE_KS",
+      "employment_status_CF_KS",
+      "employment_status_CG_KS",
+      "device_os_other_KS",
+      "device_distinct_emails_8w_KS",
+      "zip_count_4w_PSI",
+      "has_other_cards_PSI",
+      "foreign_request_PSI",
+      "device_os_windows_PSI",
+      "bank_months_count_PSI",
+      "velocity_24h_PSI",
+      "prev_address_months_count_PSI",
+      "credit_risk_score_PSI",
+      "payment_type_AD_PSI",
+      "payment_type_AC_PSI",
+      "payment_type_AB_PSI",
+      "payment_type_AA_PSI",
+      "email_is_free_PSI",
+      "keep_alive_session_PSI",
+      "velocity_6h_PSI",
+      "customer_age_PSI",
+      "device_os_x11_PSI",
+      "device_os_linux_PSI",
+      "month_PSI",
+      "income_PSI",
+      "intended_balcon_amount_PSI",
+      "phone_mobile_valid_PSI",
+      "date_of_birth_distinct_emails_4w_PSI",
+      "source_INTERNET_PSI",
+      "session_length_in_minutes_PSI",
+      "housing_status_BG_PSI",
+      "days_since_request_PSI",
+      "housing_status_BD_PSI",
+      "housing_status_BC_PSI",
+      "housing_status_BF_PSI",
+      "velocity_4w_PSI",
+      "housing_status_BE_PSI",
+      "housing_status_BB_PSI",
+      "housing_status_BA_PSI",
+      "device_os_macintosh_PSI",
+      "bank_branch_count_8w_PSI",
+      "current_address_months_count_PSI",
+      "phone_home_valid_PSI",
+      "name_email_similarity_PSI",
+      "employment_status_CA_PSI",
+      "proposed_credit_limit_PSI",
+      "employment_status_CB_PSI",
+      "employment_status_CC_PSI",
+      "employment_status_CD_PSI",
+      "employment_status_CE_PSI",
+      "employment_status_CF_PSI",
+      "employment_status_CG_PSI",
+      "device_os_other_PSI",
+      "device_distinct_emails_8w_PSI"
+    ],
+    "predictionType": "BINARY_CLASSIFICATION",
+    "pinnedMetrics": [],
+    "xLabel": "evaluation:date",
+    "yLabels": [
+      "model:name",
+      "evaluationDataset:dataset-name"
+    ],
+    "alsoDisplayedLabels": [],
+    "barLabels": [
+      "evaluation:date",
+      "model:name",
+      "evaluationDataset:dataset-name"
+    ],
+    "graphStyle": "LINE",
+    "sortColumn": "refStr",
+    "sortDescending": false,
+    "showConfidenceIntervals": true,
+    "disabledMERunIds": []
+  },
+  "governSyncOptOut": false,
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1737280830836
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

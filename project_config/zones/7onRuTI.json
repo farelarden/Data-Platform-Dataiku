@@ -1,0 +1,34 @@
+{
+  "name": "Test Prediction",
+  "color": "#F9BE40",
+  "items": [
+    {
+      "objectId": "test_prepared_to_predict_scored",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "score_test_prepared_to_predict",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test_predicted_merged",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_test_predicted_merged",
+      "objectType": "RECIPE"
+    }
+  ],
+  "shared": [
+    {
+      "objectId": "test_prepared_to_predict",
+      "objectType": "DATASET"
+    }
+  ],
+  "position": {},
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

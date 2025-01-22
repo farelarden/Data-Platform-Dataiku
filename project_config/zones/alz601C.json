@@ -1,0 +1,33 @@
+{
+  "name": "Data Split",
+  "color": "#D03713",
+  "items": [
+    {
+      "objectId": "compute_test_prepared_to_predict",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test_prepared_to_predict",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "split_data_prepared",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "test",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "train",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "position": {},
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

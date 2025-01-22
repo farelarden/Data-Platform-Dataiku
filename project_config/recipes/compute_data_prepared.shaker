@@ -1,0 +1,325 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "maxRecordsForDisplay": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "maxStoredBytes": 104857600,
+      "ascending": true,
+      "timeout": -1,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL"
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "columnUseScientificNotationByName": {},
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "col_0",
+          "device_fraud_count"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "unfoldedValues": [
+            "INTERNET",
+            "TELEAPP"
+          ]
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Unfold",
+      "params": {
+        "overflowAction": "ERROR",
+        "prefix": "source_",
+        "column": "source",
+        "limit": 100
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "unfoldedValues": [
+            "other",
+            "linux",
+            "windows",
+            "macintosh",
+            "x11"
+          ]
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Unfold",
+      "params": {
+        "overflowAction": "ERROR",
+        "prefix": "device_os_",
+        "column": "device_os",
+        "limit": 5
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "unfoldedValues": [
+            "CA",
+            "CB",
+            "CE",
+            "CF",
+            "CD",
+            "CC",
+            "CG"
+          ]
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Unfold",
+      "params": {
+        "overflowAction": "ERROR",
+        "prefix": "employment_status_",
+        "column": "employment_status",
+        "limit": 100
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "unfoldedValues": [
+            "BE",
+            "BA",
+            "BD",
+            "BC",
+            "BB",
+            "BF",
+            "BG"
+          ]
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Unfold",
+      "params": {
+        "overflowAction": "ERROR",
+        "prefix": "housing_status_",
+        "column": "housing_status",
+        "limit": 100
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "designTimeReport": {
+        "report": {
+          "unfoldedValues": [
+            "AD",
+            "AA",
+            "AC",
+            "AB"
+          ]
+        }
+      },
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "Unfold",
+      "params": {
+        "overflowAction": "ERROR",
+        "prefix": "payment_type_",
+        "column": "payment_type",
+        "limit": 100
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "ColumnsSelector",
+      "params": {
+        "columns": [
+          "source",
+          "source_TELEAPP",
+          "device_os",
+          "employment_status",
+          "housing_status",
+          "payment_type"
+        ],
+        "keep": false,
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [],
+        "appliesTo": "ALL",
+        "value": "0"
+      },
+      "alwaysShowComment": false
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "FULL",
+      "ascending": true
+    },
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {},
+  "columnWidthsByName": {
+    "source_windows": 120,
+    "zip_count_4w": 105,
+    "has_other_cards": 128,
+    "foreign_request": 128,
+    "device_os_windows": 143,
+    "bank_months_count": 143,
+    "velocity_24h": 134,
+    "source": 100,
+    "prev_address_months_count": 203,
+    "TELEAPP": 100,
+    "device_os_CC": 105,
+    "device_os_CD": 105,
+    "device_os_CA": 105,
+    "credit_risk_score": 143,
+    "device_os_CB": 105,
+    "device_os_CG": 105,
+    "payment_type_AD": 128,
+    "payment_type_AC": 128,
+    "col_0": 100,
+    "device_os_CE": 105,
+    "payment_type_AB": 128,
+    "device_os_CF": 105,
+    "payment_type_AA": 128,
+    "email_is_free": 113,
+    "keep_alive_session": 150,
+    "sourceTELEAPP": 113,
+    "housing_status": 120,
+    "velocity_6h": 134,
+    "fraud_bool": 100,
+    "housing_status_AC": 143,
+    "customer_age": 105,
+    "source_x11": 100,
+    "device_os_x11": 113,
+    "housing_status_AB": 143,
+    "payment_type": 105,
+    "housing_status_AD": 143,
+    "month": 100,
+    "device_os_linux": 128,
+    "source_other": 105,
+    "housing_status_AA": 143,
+    "income": 134,
+    "intended_balcon_amount": 204,
+    "phone_mobile_valid": 150,
+    "date_of_birth_distinct_emails_4w": 255,
+    "session_length_in_minutes": 225,
+    "source_INTERNET": 128,
+    "housing_status_BG": 143,
+    "days_since_request": 176,
+    "housing_status_BD": 143,
+    "employment_status_BA": 165,
+    "housing_status_BC": 143,
+    "employment_status_BB": 165,
+    "housing_status_BF": 143,
+    "velocity_4w": 134,
+    "employment_status_BC": 165,
+    "housing_status_BE": 143,
+    "employment_status_BD": 165,
+    "employment_status_BE": 165,
+    "employment_status_BF": 165,
+    "housing_status_BB": 143,
+    "employment_status_BG": 165,
+    "housing_status_BA": 143,
+    "device_os_macintosh": 158,
+    "sourceINTERNET": 120,
+    "employment_status": 143,
+    "source_macintosh": 135,
+    "INTERNET": 100,
+    "bank_branch_count_8w": 165,
+    "current_address_months_count": 225,
+    "phone_home_valid": 135,
+    "device_os": 100,
+    "name_email_similarity": 197,
+    "proposed_credit_limit": 173,
+    "employment_status_CA": 165,
+    "employment_status_CB": 165,
+    "employment_status_CC": 165,
+    "employment_status_CD": 165,
+    "employment_status_CE": 165,
+    "employment_status_CF": 165,
+    "employment_status_CG": 165,
+    "device_fraud_count": 150,
+    "source_linux": 105,
+    "source_TELEAPP": 120,
+    "device_os_other": 128,
+    "device_distinct_emails_8w": 203
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH",
+    "individualColumnsRules": []
+  }
+}
